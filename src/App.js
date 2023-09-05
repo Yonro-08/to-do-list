@@ -3,7 +3,7 @@ import { useState } from "react";
 import Form from "./components/Form/Form";
 import TasksList from "./components/TasksList/TasksList";
 
-import "./app.css";
+import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -12,7 +12,7 @@ function App() {
   ]);
 
   return (
-    <div className="app">
+    <div className="App">
       <div className="container">
         <h1 style={{ marginBottom: "20px" }}>Get Things Done!</h1>
         <Form setTasks={setTasks} />
