@@ -10,7 +10,7 @@ button {
   height: 27.6px;
   border: none;
 }
-.app {
+.App {
   display: flex;
   align-items: center;
   justify-content: center;
