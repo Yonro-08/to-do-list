@@ -27,4 +27,6 @@ button {
   color: white;
   background-color: #1c173f;
   border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px gray;
 }
