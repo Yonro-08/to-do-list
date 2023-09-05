@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #834bf6;
+  border-radius: 5px;
+}
+.TaskBtn {
+  display: flex;
+  gap: 10px;
+}
+.TaskBtn button {
+  background-color: transparent;
+}
+.TaskBtn svg {
+  fill: white;
+}
