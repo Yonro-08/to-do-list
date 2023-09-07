@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1 style={{ marginBottom: "20px" }}>Get Things Done!</h1>
-        <Form setTasks={setTasks} />
+        <Form />
         <TasksList tasks={tasks} setTasks={setTasks} />
       </div>
     </div>

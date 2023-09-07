@@ -1,13 +1,16 @@
+import { useSelector } from "react-redux";
+
 import Task from "./Task/Task";
+
 import "./TasksList.css";
 
-function TaskList({ tasks, setTasks }) {
+function TaskList() {
+  const tasks = useSelector((state) => state.todo);
+
   return (
     <ul className="TasksList">
-      {tasks.map((elem, i, arr) => {
-        return (
-          <Task key={elem.id} task={elem} tasks={arr} setTasks={setTasks} />
-        );
+      {tasks.map((task) => {
+        return <Task key={task.id} task={task} />;
       })}
     </ul>
   );

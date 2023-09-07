@@ -1,20 +1,25 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+
 import Button from "../Button/Button";
 import Input from "../Input/Input";
+import { customAddTask } from "../../store/todoReducer";
 
 import "./Form.css";
 
-const Form = ({ setTasks }) => {
+const Form = () => {
   const [inputValue, setInputValue] = useState("");
+
+  const dispatch = useDispatch();
 
   const addTask = (e) => {
     e.preventDefault();
-    if (inputValue === "") return;
-    setTasks((prev) => [
-      ...prev,
-      { id: new Date().getTime(), title: inputValue },
-    ]);
+    const task = {
+      id: new Date().getTime(),
+      title: inputValue,
+    };
     setInputValue("");
+    return dispatch(customAddTask(task));
   };
 
   return (
